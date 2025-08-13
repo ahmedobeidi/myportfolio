@@ -1,0 +1,26 @@
+/* Hide scrollbar */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+/* Enable smooth scrolling and snap to sections */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.active-link {
+  color: #d97706 !important; /* Tailwind amber-600 */
+}
