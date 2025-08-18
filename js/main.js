@@ -41,6 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBurger.addEventListener("click", () => {
     mobileNav.classList.remove("-translate-x-full");
     mobileNav.classList.add("translate-x-0");
+
+    // Highlight current section link in mobile menu
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    let scrollPos = window.scrollY + window.innerHeight / 2;
+    let currentSection = sections[0];
+    for (const section of sections) {
+      if (section.offsetTop <= scrollPos) {
+        currentSection = section;
+      }
+    }
+    mobileNav.querySelectorAll("a").forEach(link => {
+      link.classList.toggle(
+        "text-amber-600",
+        link.getAttribute("href") === `#${currentSection.id}`
+      );
+    });
   });
 
   // 4. Close menu
