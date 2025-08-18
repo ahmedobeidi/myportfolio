@@ -24,3 +24,24 @@ body {
 .active-link {
   color: #d97706 !important; /* Tailwind amber-600 */
 }
+
+.menu_burger_container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar_mobile {
+  transition: transform 0.3s;
+  will-change: transform;
+}
+.navbar_mobile.-translate-x-full {
+  transform: translateX(-100%);
+}
+.navbar_mobile.translate-x-0 {
+  transform: translateX(0);
+}
+.menu_close {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
