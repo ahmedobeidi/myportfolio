@@ -31,7 +31,7 @@ function prevSlide() {
 
 function startAutoSlide() {
   stopAutoSlide();
-  intervalId = setInterval(nextSlide, 4000);
+  intervalId = setInterval(nextSlide, 3000);
 }
 
 function stopAutoSlide() {
